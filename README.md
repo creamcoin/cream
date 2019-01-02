@@ -22,14 +22,14 @@ Website
 
 Specs
 ------
-> Version 0.17.1.0
-> Algo: Skein
-> Block time: 4 min
-> Maturation: 40 blocks
+> Version 0.17.1.0<br/>
+> Algo: Skein<br/>
+> Block time: 4 min<br/>
+> Maturation: 40 blocks<br/>
 > Tx: 4 blocks
 
 Mining
 ------
 
-> low  diff: stratum+tcp://pool.creamcoin.com:4444
-> high diff: stratum+tcp://pool.creamcoin.com:4445
+> low  diff: stratum+tcp://pool.creamcoin.com:4444<br/>
+> high diff: stratum+tcp://pool.creamcoin.com:4445<br/>
