@@ -27,7 +27,9 @@ Specs
 > Algo: Skein<br/>
 > Block time: 4 min<br/>
 > Maturation: 40 blocks<br/>
-> Tx: 4 blocks
+> Tx: 4 blocks<br/>
+> RPC port: 9005<br/>
+> P2P port: 9006<br/>
 
 Mining
 ------
