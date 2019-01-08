@@ -34,6 +34,9 @@ Specs
 > PrivateKeyPrefix: 0xa6<br/>
 > WIF_Start: 6<br/>
 > CWIF_Start: R<br/>
+> Block reward: 40 CRM<br/>
+> Halving on every: 131400 blocks [every year]<br/>
+
 
 Mining
 ------
