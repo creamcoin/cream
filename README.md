@@ -23,7 +23,8 @@ Website
 
 Specs
 ------
-> Version 0.17.1.0<br/>
+> Ticker: CRM<br/>
+> Version: 0.17.1.0<br/>
 > Algo: Skein<br/>
 > Block time: 4 min<br/>
 > Maturation: 40 blocks<br/>
@@ -43,3 +44,8 @@ Mining
 
 > low  diff: stratum+tcp://pool.creamcoin.com:4444<br/>
 > high diff: stratum+tcp://pool.creamcoin.com:4445<br/>
+
+Explorer
+------
+
+> http://explorer.creamcoin.com
