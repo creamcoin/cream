@@ -46,11 +46,11 @@ static const int MAX_URI_LENGTH = 255;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 36
 
-#define QAPP_ORG_NAME "Bitcoin"
-#define QAPP_ORG_DOMAIN "bitcoin.org"
-#define QAPP_APP_NAME_DEFAULT "Bitcoin-Qt"
-#define QAPP_APP_NAME_TESTNET "Bitcoin-Qt-testnet"
-#define QAPP_APP_NAME_REGTEST "Bitcoin-Qt-regtest"
+#define QAPP_ORG_NAME "Cream"
+#define QAPP_ORG_DOMAIN "creamcoin.com"
+#define QAPP_APP_NAME_DEFAULT "Cream-Qt"
+#define QAPP_APP_NAME_TESTNET "Cream-Qt-testnet"
+#define QAPP_APP_NAME_REGTEST "Cream-Qt-regtest"
 
 /* One gigabyte (GB) in bytes */
 static constexpr uint64_t GB_BYTES{1000000000};

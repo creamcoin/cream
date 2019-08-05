@@ -73,7 +73,7 @@
 // Application startup time (used for uptime calculation)
 const int64_t nStartupTime = GetTime();
 
-const char * const BITCOIN_CONF_FILENAME = "bitcoin.conf";
+const char * const BITCOIN_CONF_FILENAME = "cream.conf";
 
 ArgsManager gArgs;
 
@@ -661,7 +661,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(nullptr, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "bitcoin";
+    const char* pszModule = "cream";
 #endif
     if (pex)
         return strprintf(
@@ -680,13 +680,13 @@ void PrintExceptionContinue(const std::exception* pex, const char* pszThread)
 
 fs::path GetDefaultDataDir()
 {
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Bitcoin
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Bitcoin
-    // Mac: ~/Library/Application Support/Bitcoin
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Creamcoin
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Creamcoin
+    // Mac: ~/Library/Application Support/Creamcoin
     // Unix: ~/.bitcoin
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Bitcoin";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Creamcoin";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -696,10 +696,10 @@ fs::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/Bitcoin";
+    return pathRet / "Library/Application Support/Creamcoin";
 #else
     // Unix
-    return pathRet / ".bitcoin";
+    return pathRet / ".Creamcoin";
 #endif
 #endif
 }
@@ -1209,7 +1209,9 @@ std::string CopyrightHolders(const std::string& strPrefix)
 
     // Check for untranslated substitution to make sure Bitcoin Core copyright is not removed by accident
     if (strprintf(COPYRIGHT_HOLDERS, COPYRIGHT_HOLDERS_SUBSTITUTION).find("Bitcoin Core") == std::string::npos) {
-        strCopyrightHolders += "\n" + strPrefix + "The Bitcoin Core developers";
+        std::string strYear = strPrefix;
+        strYear.replace(strYear.find("2018"), sizeof("2018")-1, "2009");
+        strCopyrightHolders += "\n" + strYear + "The Bitcoin Core developers";
     }
     return strCopyrightHolders;
 }
