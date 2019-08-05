@@ -54,11 +54,11 @@ static const bool DEFAULT_WHITELISTFORCERELAY = false;
 /** Default for -minrelaytxfee, minimum relay fee for transactions */
 static const unsigned int DEFAULT_MIN_RELAY_TX_FEE = 1000;
 //! -maxtxfee default
-static const CAmount DEFAULT_TRANSACTION_MAXFEE = COIN / 10;
+static const CAmount DEFAULT_TRANSACTION_MAXFEE = COIN / 100;
 //! Discourage users to set fees higher than this amount (in satoshis) per kB
-static const CAmount HIGH_TX_FEE_PER_KB = COIN / 100;
+static const CAmount HIGH_TX_FEE_PER_KB = COIN / 1000;
 //! -maxtxfee will warn if called with a higher fee than this amount (in satoshis)
-static const CAmount HIGH_MAX_TX_FEE = 100 * HIGH_TX_FEE_PER_KB;
+static const CAmount HIGH_MAX_TX_FEE = 10 * HIGH_TX_FEE_PER_KB;
 /** Default for -limitancestorcount, max number of in-mempool ancestors */
 static const unsigned int DEFAULT_ANCESTOR_LIMIT = 25;
 /** Default for -limitancestorsize, maximum kilobytes of tx + all in-mempool ancestors */
@@ -83,7 +83,7 @@ static const int MAX_SCRIPTCHECK_THREADS = 16;
 /** -par default (number of script-checking threads, 0 = auto) */
 static const int DEFAULT_SCRIPTCHECK_THREADS = 0;
 /** Number of blocks that can be requested at any given time from a single peer. */
-static const int MAX_BLOCKS_IN_TRANSIT_PER_PEER = 16;
+static const int MAX_BLOCKS_IN_TRANSIT_PER_PEER = 256;
 /** Timeout in seconds during which a peer must stall block download progress before being disconnected. */
 static const unsigned int BLOCK_STALLING_TIMEOUT = 2;
 /** Number of headers sent in one getheaders result. We rely on the assumption that if a peer sends
@@ -124,7 +124,7 @@ static const bool DEFAULT_PERSIST_MEMPOOL = true;
 /** Default for -mempoolreplacement */
 static const bool DEFAULT_ENABLE_REPLACEMENT = true;
 /** Default for using fee filter */
-static const bool DEFAULT_FEEFILTER = true;
+static const bool DEFAULT_FEEFILTER = false;
 
 /** Maximum number of headers to announce when relaying blocks with headers message.*/
 static const unsigned int MAX_BLOCKS_TO_ANNOUNCE = 8;
