@@ -9,6 +9,7 @@
 #include <crypto/common.h>
 #include <crypto/ripemd160.h>
 #include <crypto/sha256.h>
+#include <crypto/sph_skein.h>
 #include <prevector.h>
 #include <serialize.h>
 #include <uint256.h>
@@ -203,5 +204,26 @@ uint256 SerializeHash(const T& obj, int nType=SER_GETHASH, int nVersion=PROTOCOL
 unsigned int MurmurHash3(unsigned int nHashSeed, const std::vector<unsigned char>& vDataToHash);
 
 void BIP32Hash(const ChainCode &chainCode, unsigned int nChild, unsigned char header, const unsigned char data[32], unsigned char output[64]);
+
+/* ----------- Skein Hash ------------------------------------------------ */
+template<typename T1>
+inline uint256 HashSkein(const T1 pbegin, const T1 pend)
+{
+    sph_skein512_context ctx_skein;
+    static unsigned char pblank[1];
+
+    uint512 hash1;
+    uint256 hash2;
+
+    sph_skein512_init(&ctx_skein);
+    sph_skein512(&ctx_skein, (pbegin == pend ? pblank : static_cast<const void*>(&pbegin[0])), (pend - pbegin) * sizeof(pbegin[0]));
+    sph_skein512_close(&ctx_skein, static_cast<void*>(&hash1));
+
+    CSHA256 sha;
+    sha.Write((const unsigned char*)&hash1, 64);
+    sha.Finalize((unsigned char*)&hash2);
+
+    return hash2;
+}
 
 #endif // BITCOIN_HASH_H
