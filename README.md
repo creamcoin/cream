@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://creamcoin.com)
 
-[![N|Solid](https://raw.githubusercontent.com/creamcoin/cream/master/src/qt/res/icons/cream_splash.png)](https://creamcoin.com)
+[![N|Solid](https://raw.githubusercontent.com/creamcoin/cream/master/src/qt/res/icons/about.png)](https://creamcoin.com)
 
 What is Cream?
 --
