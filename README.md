@@ -32,6 +32,7 @@ Specs
 > RPC port: 9005<br/>
 > P2P port: 9006<br/>
 > Address Prefix: 28<br/>
+> Secret Prefix: 166<br/>
 > Network version: 0x1c<br/>
 > PrivateKeyPrefix: 0xa6<br/>
 > WIF_Start: 6<br/>
