@@ -31,6 +31,7 @@ Specs
 > Tx: 4 blocks<br/>
 > RPC port: 9005<br/>
 > P2P port: 9006<br/>
+> Address Prefix: 28<br/>
 > Network version: 0x1c<br/>
 > PrivateKeyPrefix: 0xa6<br/>
 > WIF_Start: 6<br/>
