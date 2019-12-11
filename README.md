@@ -24,7 +24,7 @@ Website
 Specs
 ------
 > Ticker: CRM (₢)<br/> 
-> Version: 0.17.1.0<br/>
+> Version: 0.18.1.0<br/>
 > Algo: Skein<br/>
 > Block time: 4 min<br/>
 > Maturation: 40 blocks<br/>
